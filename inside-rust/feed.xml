@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <generator uri="https://blog.rust-lang.org/inside-rust/" version="0.1.0">Inside Rust Blog</generator>
+    <link href="https://blog.rust-lang.org/inside-rust/feed.xml" rel="self" type="application/atom+xml" />
+    <link href="https://blog.rust-lang.org/inside-rust/" rel="alternate" type="text/html" />
+    <id>https://blog.rust-lang.org/inside-rust/</id>
+    <title>Inside Rust Blog</title>
+    <subtitle>Want to follow along with Rust development? Curious how you might get involved? Take a look!</subtitle>
+    <author>
+        <name>Maintained by the Rust Teams.</name>
+        <uri>https://github.com/rust-lang/blog.rust-lang.org/</uri>
+    </author>
+    <updated>2021-02-03T21:08:06+00:00</updated>
+
+    
+    <entry>
+        <title>Lang team February Update</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2021/02/03/lang-team-feb-update.html" type="text/html" title="Lang team February Update" />
+        <published>2021-02-03T00:00:00+00:00</published>
+        <updated>2021-02-03T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2021/02/03/lang-team-feb-update.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2021/02/03/lang-team-feb-update.html">&lt;p&gt;Today the lang team held its first planning meeting (&lt;a href&#x3D;&quot;https://github.com/rust-lang/lang-team/blob/master/design-meeting-minutes/2021-02-03-Planning-Meeting.md&quot;&gt;minutes&lt;/a&gt;). From now on, we&#x27;re going to hold these meetings on the first Wednesday of every month.&lt;/p&gt;
+&lt;p&gt;The planning meeting is used for:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Checking in on the status of our active projects&lt;/li&gt;
+&lt;li&gt;Planning the design meetings for the remainder of the month&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After each meeting, we plan to post an update (like this one!) with notes and meeting announcements.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#update-from-active-projects&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;update-from-active-projects&quot;&gt;&lt;/a&gt;Update from active projects&lt;/h2&gt;
+&lt;p&gt;Did you know that you can see the lang team&#x27;s active projects on our &lt;a href&#x3D;&quot;https://github.com/rust-lang/lang-team/projects/2&quot;&gt;project board&lt;/a&gt;? We&#x27;re still experimenting and evolving the setup, but the goal is that it should give you a quick overview of what kinds of things the lang team is focused on, and what stage they are in their development. Our minutes contain a &lt;a href&#x3D;&quot;https://github.com/rust-lang/lang-team/blob/master/design-meeting-minutes/2021-02-03-Planning-Meeting.md#project-updates-and-discussion&quot;&gt;writeup for each active project&lt;/a&gt;, but let me call out a few highlights here:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;async foundations:
+&lt;ul&gt;
+&lt;li&gt;continued progress on polish, new traits&lt;/li&gt;
+&lt;li&gt;making plans to stabilize async functions in traits&lt;/li&gt;
+&lt;li&gt;working on a &lt;a href&#x3D;&quot;https://hackmd.io/p6cmRZ9ZRQ-F1tlhGaN9rg&quot;&gt;vision document&lt;/a&gt; that lays out a multi-year vision for how async I/O should look/feel in Rust&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;const generics:
+&lt;ul&gt;
+&lt;li&gt;min const generics is stable in nightly, will be coming to a stable release soon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;rfc 2229 (&amp;quot;minimal closure capture&amp;quot;):
+&lt;ul&gt;
+&lt;li&gt;continued progress on the implementation, things are going well&lt;/li&gt;
+&lt;li&gt;we will likely add a &lt;code&gt;capture!&lt;/code&gt; macro to use for migration; it would force the capture of a particular local variable (and not some subpath of it)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;inline assembly
+&lt;ul&gt;
+&lt;li&gt;we would like to consider stabiliing inline assembly for certain architectures (but not all)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#upcoming-design-meetings&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;upcoming-design-meetings&quot;&gt;&lt;/a&gt;Upcoming design meetings&lt;/h2&gt;
+&lt;p&gt;We planned three design meetings for February. Our meetings are typically open for anyone to observe, although we have one closed meeting this week. They are also typically recorded and posted to YouTube. Ping nikomatsakis or joshtriplett for info about attending.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feb 10 [CLOSED]: &lt;a href&#x3D;&quot;https://github.com/rust-lang/lang-team/issues/81&quot;&gt;Growing the team&lt;/a&gt;. The plan is to talk about our plans to grow the team and recruit new members. &lt;strong&gt;Closed because we expect some frank talk about who might be a good candidate.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Feb 17: &lt;a href&#x3D;&quot;https://github.com/rust-lang/lang-team/issues/79&quot;&gt;Improving trust in the Rust compiler&lt;/a&gt;, discussing the Ferrocene proposal and the semantics of MIR.&lt;/li&gt;
+&lt;li&gt;Feb 24: &lt;a href&#x3D;&quot;https://github.com/rust-lang/lang-team/issues/83&quot;&gt;2021 idiom lint overview&lt;/a&gt;, discussing the various 2018 idiom lints and whether they ought to be included in 2021.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+
+        <author>
+            <name>Niko Matsakis</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Welcoming David Wood to compiler team and Jack Huey to compiler-contributors</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2021/02/01/davidtwco-jackhuey-compiler-members.html" type="text/html" title="Welcoming David Wood to compiler team and Jack Huey to compiler-contributors" />
+        <published>2021-02-01T00:00:00+00:00</published>
+        <updated>2021-02-01T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2021/02/01/davidtwco-jackhuey-compiler-members.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2021/02/01/davidtwco-jackhuey-compiler-members.html">&lt;p&gt;Please welcome &lt;a href&#x3D;&quot;https://github.com/davidtwco&quot;&gt;David Wood&lt;/a&gt; to the compiler team and &lt;a href&#x3D;&quot;https://github.com/jackh726&quot;&gt;Jack Huey&lt;/a&gt; to the &lt;a href&#x3D;&quot;https://rust-lang.github.io/rfcs/2689-compiler-team-contributors.html&quot;&gt;compiler-contributors&lt;/a&gt; group!&lt;/p&gt;
+&lt;p&gt;David Wood (&lt;a href&#x3D;&quot;https://github.com/davidtwco&quot;&gt;@davidtwco&lt;/a&gt;) has been a frequent contributor to Rust in many different parts of the compiler.
+Much of David&#x27;s recent work has been focused on &lt;a href&#x3D;&quot;https://davidtw.co/media/masters_dissertation.pdf&quot;&gt;polymorphisation&lt;/a&gt; which allows rustc to reduce the number of duplicated generic functions in certain situations and on adding &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/77117&quot;&gt;split DWARF&lt;/a&gt; support to the LLVM backend.
+Previously, David has worked on numerous diagnostic improvements, internal compiler error fixes and the &lt;a href&#x3D;&quot;https://doc.rust-lang.org/edition-guide/rust-2018/ownership-and-lifetimes/non-lexical-lifetimes.html&quot;&gt;non-lexical lifetimes&lt;/a&gt; initiative.&lt;/p&gt;
+&lt;p&gt;Jack Huey (&lt;a href&#x3D;&quot;https://github.com/jackh726&quot;&gt;@jackh726&lt;/a&gt;) has been a major contributor to the &lt;a href&#x3D;&quot;https://github.com/rust-lang/chalk&quot;&gt;Chalk&lt;/a&gt; project which is a re-implementation of the Rust trait system using logical-programming constructs with the eventual goal of replacing the current system.
+In addition to Chalk, Jack has also worked on various refactorings to make the rustc trait code more like Chalk.
+Jack is also the co-lead of the &lt;a href&#x3D;&quot;https://rust-lang.github.io/compiler-team/working-groups/traits/&quot;&gt;traits working group&lt;/a&gt; which is coordinating this effort.&lt;/p&gt;
+&lt;p&gt;Congratulations &lt;a href&#x3D;&quot;https://github.com/davidtwco&quot;&gt;David Wood&lt;/a&gt; and &lt;a href&#x3D;&quot;https://github.com/jackh726&quot;&gt;Jack Huey&lt;/a&gt; and thanks!&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Wesley Wiser</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Rust &amp; the case of the disappearing stack frames</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2021/01/26/ffi-unwind-longjmp.html" type="text/html" title="Rust &amp; the case of the disappearing stack frames" />
+        <published>2021-01-26T00:00:00+00:00</published>
+        <updated>2021-01-26T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2021/01/26/ffi-unwind-longjmp.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2021/01/26/ffi-unwind-longjmp.html">&lt;p&gt;Now that the &lt;a href&#x3D;&quot;https://github.com/rust-lang/project-ffi-unwind&quot;&gt;FFI-unwind Project Group&lt;/a&gt; has merged &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/blob/master/text/2945-c-unwind-abi.md&quot;&gt;an
+RFC&lt;/a&gt; specifying the &lt;code&gt;&amp;quot;C unwind&amp;quot;&lt;/code&gt; ABI and removing some instances
+of undefined behavior in the &lt;code&gt;&amp;quot;C&amp;quot;&lt;/code&gt; ABI, we are ready to establish new goals for
+the group.&lt;/p&gt;
+&lt;p&gt;Our most important task, of course, is to implement the newly-specified
+behavior. This work has been undertaken by Katelyn Martin and can be followed
+&lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/76570&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The requirements of our current charter, and the &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/blob/master/text/2797-project-ffi-unwind.md&quot;&gt;RFC creating the
+group&lt;/a&gt;, are effectively fulfilled by the specification of &lt;code&gt;&amp;quot;C unwind&amp;quot;&lt;/code&gt;, so one option is to simply wind down the project group. While
+drafting the &lt;code&gt;&amp;quot;C unwind&amp;quot;&lt;/code&gt; RFC, however, we discovered that the existing
+guarantees around &lt;code&gt;longjmp&lt;/code&gt; and similar functions could be improved. Although
+this is not strictly related to unwinding&lt;sup&gt;&lt;a href&#x3D;&quot;#longjmp-unwind&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, they
+are closesly related: they are both &amp;quot;non-local&amp;quot; control-flow mechanisms that
+prevent functions from returning normally. Because one of the goals of the Rust
+project is for Rust to interoperate with existing C-like languages, and these
+control-flow mechanisms are widely used in practice, we believe that Rust must
+have some level of support for them.&lt;/p&gt;
+&lt;p&gt;This blog post will explain the problem space. If you&#x27;re interested in helping
+specify this behavior, please come join us in &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/210922-project-ffi-unwind/topic/welcome.2C.20redux/near/216807277&quot;&gt;our Zulip
+stream&lt;/a&gt;!&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#longjmp-and-its-ilk&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;longjmp-and-its-ilk&quot;&gt;&lt;/a&gt;&lt;code&gt;longjmp&lt;/code&gt; and its ilk&lt;/h2&gt;
+&lt;p&gt;Above, I mentioned &lt;code&gt;longjmp&lt;/code&gt; and &amp;quot;similar functions&amp;quot;. Within the context of the
+&lt;code&gt;&amp;quot;C unwind&amp;quot;&lt;/code&gt; PR, this referred to functions that have different implementations
+on different platforms, and which, on &lt;em&gt;some&lt;/em&gt; platforms, rely on &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/blob/master/text/2945-c-unwind-abi.md#forced-unwinding&quot;&gt;forced
+unwinding&lt;/a&gt;. In our next specification effort, however, we
+would like to ignore the connection to unwinding entirely, and define a class
+of functions with the following characteristic:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a function that causes a &amp;quot;jump&amp;quot; in control flow by deallocating some number of
+stack frames without performing any additional &amp;quot;clean-up&amp;quot; such as running
+destructors&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is the class of functions we would like to address. The other primary
+example is &lt;code&gt;pthread_exit&lt;/code&gt;. As part of our specification, we would like to
+create a name for this type of function, but we have not settled on one yet;
+for now, we are referring to them as &amp;quot;cancelable&amp;quot;, &amp;quot;&lt;code&gt;longjmp&lt;/code&gt;-like&amp;quot;, or
+&amp;quot;stack-deallocating&amp;quot; functions.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#our-constraints&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;our-constraints&quot;&gt;&lt;/a&gt;Our constraints&lt;/h2&gt;
+&lt;p&gt;Taking a step back, we have two mandatory constraints on our design:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;There must be sound way to call &lt;code&gt;libc&lt;/code&gt; functions that may &lt;code&gt;pthread_cancel&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;There must be a sound way for Rust code to invoke C code that may &lt;code&gt;longjmp&lt;/code&gt;
+over Rust frames.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition, we would like to adhere to several design principles:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The specified behavior can&#x27;t be target-platform-specific; in other words, our
+specification of Rust&#x27;s interaction with &lt;code&gt;longjmp&lt;/code&gt; should not depend on
+whether &lt;code&gt;longjmp&lt;/code&gt; deallocates frames or initiates a forced-unwind.
+Optimizations, however, &lt;em&gt;can&lt;/em&gt; be target-platform-specific.&lt;/li&gt;
+&lt;li&gt;There should be no difference in the specified behavior of frame-deallocation
+performed by &lt;code&gt;longjmp&lt;/code&gt; versus that performed by &lt;code&gt;pthread_cancel&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;We will only permit canceling POFs (&amp;quot;Plain Old Frames&amp;quot;, explained in the next
+section).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#pofs-and-stack-deallocating-functions&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;pofs-and-stack-deallocating-functions&quot;&gt;&lt;/a&gt;POFs and stack-deallocating functions&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;&amp;quot;C unwind&amp;quot;&lt;/code&gt; RFC introduced a new concept designed to help us deal with
+force-unwinding or stack-deallocating functions: the &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/blob/master/text/2945-c-unwind-abi.md#plain-old-frames&quot;&gt;POF, or &amp;quot;Plain Old
+Frame&amp;quot;&lt;/a&gt;. These are frames that can be trivially deallocated,
+i.e., they do no &amp;quot;cleanup&amp;quot; (such as running &lt;code&gt;Drop&lt;/code&gt; destructors) before
+returning.&lt;/p&gt;
+&lt;p&gt;From the definition, it should be clear that it is dangerous to call a
+stack-deallocating function in a context that could destroy a non-POF stack
+frame. A simple specification for Rust&#x27;s interaction with stack-deallocating
+functions, then, could be that they are safe to call as long as only POFs are
+deallocated. This would make Rust&#x27;s guarantees for &lt;code&gt;longjmp&lt;/code&gt; essentially the
+same as C++&#x27;s.&lt;/p&gt;
+&lt;p&gt;For now, however, we are considering POFs to be &amp;quot;necessary but not sufficient.&amp;quot;
+We believe that a more restrictive specification may provide the following
+advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;more opportunities for helpful compiler warnings or errors to prevent misuse
+of stack-deallocation functions&lt;/li&gt;
+&lt;li&gt;semantic tracatbility: we can make reliance on stack-frame-deallocation
+visible for all functions involved&lt;/li&gt;
+&lt;li&gt;increased optimization potential when cleanup is &amp;quot;guaranteed&amp;quot; (i.e., the
+compiler may turn a POF into a non-POF if it knows that this is safe and that
+the newly inserted cleanup operation is necessary for an optimization)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#annotating-pofs&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;annotating-pofs&quot;&gt;&lt;/a&gt;Annotating POFs&lt;/h2&gt;
+&lt;p&gt;Our current plan is to introduce a new annotation for frames that are intended
+to be safe to cancel. These functions, of course, must be POFs. The
+annotation would be &amp;quot;transitive&amp;quot;, just like &lt;code&gt;async&lt;/code&gt;: functions without this
+annotation either must not invoke any annotated functions or must guarantee
+that they will cause the stack-deallocation to terminate (for instance, a
+non-POF, non-annotated function may call &lt;code&gt;setjmp&lt;/code&gt;).&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#open-questions&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;open-questions&quot;&gt;&lt;/a&gt;Open questions&lt;/h3&gt;
+&lt;p&gt;The name of the annotation should be based on the terminology used to refer to
+functions that are safe to deallocate. Because this terminology is not
+finalized, we do not yet have a name for the annotation.&lt;/p&gt;
+&lt;p&gt;It is also not yet clear whether annotated functions should be able to invoke
+any functions without this annotation. As long as the function call does not
+return a new &lt;code&gt;Drop&lt;/code&gt; resource (making the annotated function no longer a POF),
+it may be safe, as long as we guarantee that the annotated function cannot be
+canceled while the un-annotated function is still on the stack; i.e.,
+cancelation must happen during an active call to an annotated cancelable
+function.&lt;/p&gt;
+&lt;p&gt;Most importantly, we do not have a plan for how to indicate that a
+non-annotated function can safely call an annotated function. The example of
+using &lt;code&gt;setjmp&lt;/code&gt; to ensure that a &lt;code&gt;longjmp&lt;/code&gt; will not discard a stack frame is
+non-trivial:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;setjmp&lt;/code&gt; is not a function but a C macro. There is no way to call it directly
+in Rust.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;setjmp&lt;/code&gt; does not prevent arbitrary &lt;code&gt;longjmp&lt;/code&gt;s from crossing over a frame,
+the way C++&#x27;s &lt;code&gt;catch&lt;/code&gt; can catch any exception. Instead, &lt;code&gt;setjmp&lt;/code&gt; creates an
+object of type &lt;code&gt;jmp_buf&lt;/code&gt;, which must be passed to &lt;code&gt;longjmp&lt;/code&gt;; this causes the
+jump to stop at the corresponding &lt;code&gt;setjmp&lt;/code&gt; call.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And, of course, &lt;code&gt;setjmp&lt;/code&gt;/&lt;code&gt;longjmp&lt;/code&gt; is not the only example of such a mechanism!
+Thus, there is probably no way for the compiler to guarantee that this is safe,
+and it&#x27;s unclear what heuristics could be applied to make it as safe as
+possible.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#examples&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;examples&quot;&gt;&lt;/a&gt;Examples&lt;/h3&gt;
+&lt;p&gt;Let us use &lt;code&gt;#[pof-longjmp]&lt;/code&gt; as a placeholder for the annotation indicating a
+function that can be safely deallocated, and let us assume that the following
+function is a wrapper around &lt;code&gt;longjmp&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;extern &amp;quot;C&amp;quot; {
+    #[pof-longjmp]
+    fn longjmp(CJmpBuf) -&amp;gt; !;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The compiler would not allow this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;fn has_drop(jmp_buf: CJmpBuf) {
+    let s &#x3D; &amp;quot;string data&amp;quot;.to_owned();
+    unsafe { longjmp(jmp_buf); }
+    println!(&amp;quot;{}&amp;quot;, s);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here, &lt;code&gt;s&lt;/code&gt; implements &lt;code&gt;Drop&lt;/code&gt;, so &lt;code&gt;has_drop&lt;/code&gt; is not a POF. Since &lt;code&gt;longjmp&lt;/code&gt; is
+annotated &lt;code&gt;#[pof-longjmp]&lt;/code&gt;, the un-annotated function &lt;code&gt;has_drop&lt;/code&gt; can&#x27;t call it
+(even in an &lt;code&gt;unsafe&lt;/code&gt; block). If, however, &lt;code&gt;has_drop&lt;/code&gt; is annotated:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;#[pof-longjmp]
+fn has_drop(jmp_buf: CJmpBuf) {
+    let s &#x3D; &amp;quot;string data&amp;quot;.to_owned();
+    unsafe { longjmp(jmp_buf); }
+    println!(&amp;quot;{}&amp;quot;, s);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;...there is a different error: &lt;code&gt;#[pof-longjmp]&lt;/code&gt; can only be applied to POFs,
+and since &lt;code&gt;s&lt;/code&gt; implements &lt;code&gt;Drop&lt;/code&gt;, &lt;code&gt;has_drop&lt;/code&gt; is not a POF.&lt;/p&gt;
+&lt;p&gt;An example of a permissible &lt;code&gt;longjmp&lt;/code&gt; call would be:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;#[pof-longjmp]
+fn no_drop(jmp_buf: CJmpBuf) {
+    let s &#x3D; &amp;quot;string data&amp;quot;;
+    unsafe { longjmp(jmp_buf); }
+    println!(&amp;quot;{}&amp;quot;, s);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#join-us&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;join-us&quot;&gt;&lt;/a&gt;Join us!&lt;/h2&gt;
+&lt;p&gt;If you would like to help us create this specification and write an RFC for it,
+please join us in &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/210922-project-ffi-unwind/topic/welcome.2C.20redux/near/216807277&quot;&gt;zulip&lt;/a&gt;!&lt;/p&gt;
+&lt;h4&gt;&lt;a href&#x3D;&quot;#footnotes&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;footnotes&quot;&gt;&lt;/a&gt;Footnotes&lt;/h4&gt;
+&lt;p&gt;&lt;a name&#x3D;&quot;longjmp-unwind&quot;&gt;1&lt;/a&gt;: As mentioned in the RFC, on Windows,
+&lt;code&gt;longjmp&lt;/code&gt; actually &lt;em&gt;is&lt;/em&gt; an unwinding operation. On other platforms, however,
+&lt;code&gt;longjmp&lt;/code&gt; is unrelated to unwinding.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Kyle Strand</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Changes to the Rustdoc team</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2021/01/19/changes-to-rustdoc-team.html" type="text/html" title="Changes to the Rustdoc team" />
+        <published>2021-01-19T00:00:00+00:00</published>
+        <updated>2021-01-19T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2021/01/19/changes-to-rustdoc-team.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2021/01/19/changes-to-rustdoc-team.html">&lt;p&gt;Recently, there have been a lot of improvements in rustdoc. It was possible thanks to our new contributors. In light of these recent contributions, a few changes were made in the rustdoc team.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#adding-a-new-team-leader&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;adding-a-new-team-leader&quot;&gt;&lt;/a&gt;Adding a new team leader&lt;/h2&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/jyn514&quot;&gt;Joshua&lt;/a&gt; has been helping me &lt;strong&gt;a lot&lt;/strong&gt; on the leading parts by tagging issues and mentoring newcomers. But at the same time, he initiated great changes in the rustdoc codebase that led to huge performance improvements, he finished the &amp;quot;intra doc link&amp;quot; features which is now stable after years of instability (more information &lt;a href&#x3D;&quot;https://doc.rust-lang.org/rustdoc/linking-to-items-by-name.html&quot;&gt;here&lt;/a&gt;). He also did multiple additional things but let&#x27;s stop the listing here. :)&lt;/p&gt;
+&lt;p&gt;Overall, he&#x27;s been an enormous help and making him co-lead is just making official everything&#x27;s he&#x27;s been doing since he joined the rustdoc team (and even before!). I&#x27;m glad to have him on the team and as co-lead.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#membership-changes&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;membership-changes&quot;&gt;&lt;/a&gt;Membership Changes&lt;/h2&gt;
+&lt;p&gt;In addition to the new co-leadership nomination, we also have some new rustdoc team members to announce: &lt;a href&#x3D;&quot;https://github.com/camelid&quot;&gt;&lt;strong&gt;@camelid&lt;/strong&gt;&lt;/a&gt; and &lt;a href&#x3D;&quot;https://github.com/Nemo157&quot;&gt;&lt;strong&gt;@Nemo157&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/camelid&quot;&gt;&lt;strong&gt;@camelid&lt;/strong&gt;&lt;/a&gt; did a huge number of contributions on rustdoc, helping on the cleanup and fixing bugs.&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/Nemo157&quot;&gt;&lt;strong&gt;@Nemo157&lt;/strong&gt;&lt;/a&gt; helped a lot on the &amp;quot;front-end&amp;quot; part of rustdoc (i.e. HTML/CSS/JS), not only reviewing but also fixing bugs and improving the current code.&lt;/p&gt;
+&lt;p&gt;Both of them have been contributing for a long time and we&#x27;re really glad to (finally) have them on board.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#conclusion&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;conclusion&quot;&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;With all these great new onboardings, we&#x27;re expecting rustdoc to improve at much faster rate. More to come soon!&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Guillaume Gomez</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Rustdoc performance improvements</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2021/01/15/rustdoc-performance-improvements.html" type="text/html" title="Rustdoc performance improvements" />
+        <published>2021-01-15T00:00:00+00:00</published>
+        <updated>2021-01-15T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2021/01/15/rustdoc-performance-improvements.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2021/01/15/rustdoc-performance-improvements.html">&lt;p&gt;Hi everyone! &lt;a href&#x3D;&quot;https://github.com/GuillaumeGomez&quot;&gt;&lt;strong&gt;@GuillaumeGomez&lt;/strong&gt;&lt;/a&gt; recently tweeted about the rustdoc performance improvements and suggested that we write a blog post about it:&lt;/p&gt;
+&lt;blockquote class&#x3D;&quot;twitter-tweet&quot;&gt;&lt;p lang&#x3D;&quot;en&quot; dir&#x3D;&quot;ltr&quot;&gt;The performance comparison between &lt;a href&#x3D;&quot;https://twitter.com/rustlang?ref_src&#x3D;twsrc%5Etfw&quot;&gt;@rustlang&lt;/a&gt; rustdoc now and rustdoc 4 months ago are crazy! The rustdoc cleanup going on (we&amp;#39;re still far from done!) is having a huge positive impact! Can&amp;#39;t wait to see how much better the results will be.&lt;br&gt;&lt;br&gt;Maybe I should write a blog post? &lt;a href&#x3D;&quot;https://t.co/XapdmdZ1IZ&quot;&gt;pic.twitter.com/XapdmdZ1IZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; Guillaume Gomez (@imperioworld_) &lt;a href&#x3D;&quot;https://twitter.com/imperioworld_/status/1349383125051305984?ref_src&#x3D;twsrc%5Etfw&quot;&gt;January 13, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src&#x3D;&quot;https://platform.twitter.com/widgets.js&quot; charset&#x3D;&quot;utf-8&quot;&gt;&lt;/script&gt; 
+&lt;p&gt;The tweet received a lot of comments approving the blog post idea so here we go!&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#performance-changes&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;performance-changes&quot;&gt;&lt;/a&gt;Performance changes&lt;/h2&gt;
+&lt;p&gt;There were actually only two PRs explicitly meant to improve the performance of rustdoc:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Rustdoc: Cache resolved links &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/77700&quot;&gt;#77700&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This does what it says in the title. In particular, this sped up the time to generate intra-doc
+links for &lt;code&gt;stm32h7xx&lt;/code&gt; by a whopping &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/77700#issuecomment-735995025&quot;&gt;90,000%&lt;/a&gt;. &lt;a href&#x3D;&quot;https://github.com/bugadani&quot;&gt;&lt;strong&gt;@bugadani&lt;/strong&gt;&lt;/a&gt; did an
+excellent job on this, congratulations!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol start&#x3D;&quot;2&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;Don&#x27;t look for blanket impls in intra-doc links &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79682&quot;&gt;#79682&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This PR was very disappointing to write. The gist is that if you had&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;trait Trait {
+    fn f() {}
+}
+
+impl&amp;lt;T&amp;gt; Trait for T {}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;then linking to &lt;code&gt;usize::f&lt;/code&gt; would not only not work, but would take longer to run than the rest of
+intra-doc links to run. This temporarily disabled blanket impls until the bug is fixed and the performance can be improved, for a similar &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79682#issuecomment-738505531&quot;&gt;90x&lt;/a&gt; speedup on &lt;code&gt;stm32h7xx&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You may be wondering why &lt;code&gt;stm32h7xx&lt;/code&gt; was so slow before; see the end of the post for details.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#its-all-about-cleanup&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;its-all-about-cleanup&quot;&gt;&lt;/a&gt;It&#x27;s all about cleanup&lt;/h2&gt;
+&lt;p&gt;With the recent growth of the rustdoc team, we finally had some time to pay down the technical debt we&#x27;ve been accumulating for a while. To sum it up: removing implementations in rustdoc and using the compiler types directly. First, we need to explain a bit about how rustdoc works. When we run it to generate HTML documentation, it goes through several steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run parts of the compiler to get the information we need.&lt;/li&gt;
+&lt;li&gt;Remove the information provided by the compiler that we don&#x27;t need (for example, if an item is &lt;code&gt;doc(hidden)&lt;/code&gt;, we don&#x27;t need it). There is a lot to say on this part so maybe we&#x27;ll write another blog post to go more into details.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;doctree&lt;/code&gt; pass which adds some extra information needed by rustdoc on some items of the compiler.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;clean&lt;/code&gt; pass which converts the compiler types into rustdoc ones: basically, it transforms everything into &amp;quot;printable&amp;quot; content.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;render&lt;/code&gt; pass which then generates the desired output (HTML or, on nightly, JSON).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/jyn514&quot;&gt;&lt;strong&gt;@jyn514&lt;/strong&gt;&lt;/a&gt; noticed a while ago that &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/issues/76382&quot;&gt;most of the work in Rustdoc is duplicated&lt;/a&gt;: there are actually &lt;em&gt;three&lt;/em&gt; different abstract syntax trees (ASTs)! One for &lt;code&gt;doctree&lt;/code&gt;, one for &lt;code&gt;clean&lt;/code&gt;, and one is the original &lt;a href&#x3D;&quot;https://rustc-dev-guide.rust-lang.org/hir.html&quot;&gt;HIR&lt;/a&gt; used by the compiler.
+Rustdoc was spending quite a lot of time converting between them. Most of the speed improvements have come from getting rid of parts of the AST altogether.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#pruning-the-tree&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;pruning-the-tree&quot;&gt;&lt;/a&gt;Pruning the tree&lt;/h3&gt;
+&lt;p&gt;Most of the work &lt;code&gt;doctree&lt;/code&gt; did was 100% unnecessary. All the information it had was already present in the &lt;a href&#x3D;&quot;https://rustc-dev-guide.rust-lang.org/hir.html&quot;&gt;HIR&lt;/a&gt;, and recursively walking the crate and building up new types took quite a while to run.&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/jyn514&quot;&gt;&lt;strong&gt;@jyn514&lt;/strong&gt;&lt;/a&gt;&#x27;s first stab at this was to &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/78082&quot;&gt;get rid of the pass altogether&lt;/a&gt;. This went... badly. It turns out it did some useful work after all.&lt;/p&gt;
+&lt;p&gt;That said, there was a bunch of unnecessary work it didn&#x27;t need to do, which was to add its own types for everything. If you look at &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/blob/31d275e5877d983fecb39bbaad837f6b7cf120d3/src/librustdoc/doctree.rs&quot;&gt;the types from 3 months ago&lt;/a&gt; against &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/blob/a4cbb44ae2c80545db957763b502dc7f6ea22085/src/librustdoc/doctree.rs&quot;&gt;the types from today&lt;/a&gt;, the difference is really startling! It went from 300 lines of code replicating almost every type in the compiler to only 75 lines and 6 types.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#cleaning-the-clean-pass&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;cleaning-the-clean-pass&quot;&gt;&lt;/a&gt;Cleaning the &lt;code&gt;clean&lt;/code&gt; pass&lt;/h2&gt;
+&lt;p&gt;The first and most important part of this cleanup was a PR called &#x27;Add &lt;code&gt;Item::from_def_id_and_kind&lt;/code&gt; to reduce duplication in rustdoc&#x27; (&lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/77820&quot;&gt;#77820&lt;/a&gt;). Before that change, every &lt;a href&#x3D;&quot;https://doc.rust-lang.org/nightly/nightly-rustc/rustdoc/clean/types/struct.Item.html&quot;&gt;&lt;code&gt;Item&lt;/code&gt;&lt;/a&gt; in rustdoc was constructed in dozens of different places - for structs, for enums, for traits, the list went on and on. This made it very hard to make changes to the &lt;a href&#x3D;&quot;https://doc.rust-lang.org/nightly/nightly-rustc/rustdoc/clean/types/struct.Item.html&quot;&gt;&lt;code&gt;Item&lt;/code&gt;&lt;/a&gt; struct, because any change would break dozens of callsites, each of which had to be fixed individually. What &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/77820&quot;&gt;#77820&lt;/a&gt; did was to construct all those items in the same place, which made it far easier to change how &lt;code&gt;Item&lt;/code&gt; was represented internally.&lt;/p&gt;
+&lt;p&gt;Along the way, &lt;a href&#x3D;&quot;https://github.com/jyn514&quot;&gt;&lt;strong&gt;@jyn514&lt;/strong&gt;&lt;/a&gt; found several cleanups that were necessary in the compiler first:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Calculate visibilities once in resolve &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/78077&quot;&gt;#78077&lt;/a&gt;. Thanks to &lt;a href&#x3D;&quot;https://github.com/petrochenkov&quot;&gt;&lt;strong&gt;@petrochenkov&lt;/strong&gt;&lt;/a&gt; for tackling this!&lt;/li&gt;
+&lt;li&gt;Fix handling of item names for HIR &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/78345&quot;&gt;#78345&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#deleting-parts-of-item&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;deleting-parts-of-item&quot;&gt;&lt;/a&gt;Deleting parts of &lt;code&gt;Item&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Once that was done, we were able to get rid of large parts of the &lt;a href&#x3D;&quot;https://doc.rust-lang.org/nightly/nightly-rustc/rustdoc/clean/types/struct.Item.html&quot;&gt;&lt;code&gt;Item&lt;/code&gt;&lt;/a&gt; type by calculating the information on-demand instead, using the compiler internals. This had two benefits:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Less memory usage, because the information wasn&#x27;t stored longer than it was needed.&lt;/li&gt;
+&lt;li&gt;Less time overall, because not every item needed all the information available.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This benefited quite a lot from the &lt;a href&#x3D;&quot;https://rustc-dev-guide.rust-lang.org/query.html&quot;&gt;query system&lt;/a&gt;, which I highly encourage reading about.&lt;/p&gt;
+&lt;p&gt;Here are some example changes that calculate information on demand:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&#x27;t unnecessarily override attrs for Module &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80340&quot;&gt;#80340&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get rid of &lt;code&gt;clean::Deprecation&lt;/code&gt; &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80041&quot;&gt;#80041&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get rid of &lt;code&gt;clean::{Method, TyMethod}&lt;/code&gt; &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79125&quot;&gt;#79125&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove duplicate &lt;code&gt;Trait::auto&lt;/code&gt; field &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79126&quot;&gt;#79126&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get rid of some doctree items &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79264&quot;&gt;#79264&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get rid of &lt;code&gt;doctree::{ExternalCrate, ForeignItem, Trait, Function}&lt;/code&gt; &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79335&quot;&gt;#79335&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get rid of &lt;code&gt;doctree::Impl&lt;/code&gt; &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79312&quot;&gt;79312&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove &lt;code&gt;doctree::Macro&lt;/code&gt; and distinguish between &lt;code&gt;macro_rules!&lt;/code&gt; and &lt;code&gt;pub macro&lt;/code&gt; &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79455&quot;&gt;#79455&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pass around Symbols instead of Idents in doctree &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/79623&quot;&gt;#79623&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As you can see, all these changes not only sped up rustdoc, but discovered bugs and duplication that had been around for years.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#reusing-compiler-types&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;reusing-compiler-types&quot;&gt;&lt;/a&gt;Reusing compiler types&lt;/h3&gt;
+&lt;p&gt;And some examples of using the existing compiler types without adding our own:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[rustdoc] Switch to Symbol for &lt;code&gt;item.name&lt;/code&gt; &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80044&quot;&gt;#80044&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use more symbols in rustdoc &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80047&quot;&gt;#80047&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replace String with Symbol where possible &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80091&quot;&gt;#80091&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Continue String to Symbol conversion in rustdoc (1) &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80119&quot;&gt;#80119&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Continue String to Symbol conversion in rustdoc (2) &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80154&quot;&gt;#80154&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get rid of custom pretty-printing in rustdoc &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80799&quot;&gt;#80799&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;They replace &lt;code&gt;String&lt;/code&gt; used for items&#x27; name to use &lt;a href&#x3D;&quot;https://doc.rust-lang.org/nightly/nightly-rustc/rustc_span/symbol/struct.Symbol.html&quot;&gt;&lt;code&gt;Symbol&lt;/code&gt;&lt;/a&gt; instead. Symbols are interned strings, so we&#x27;re not only preventing unnecessary conversions but also greatly improving memory usage. You can read more about Symbols in the &lt;a href&#x3D;&quot;https://rustc-dev-guide.rust-lang.org/appendix/glossary.html?highlight&#x3D;symbol#glossary&quot;&gt;rustc-dev-guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The interesting part is that it also allowed some &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80750&quot;&gt;small improvements&lt;/a&gt; in the compiler itself.&lt;/p&gt;
+&lt;p&gt;With the same logic came &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80261&quot;&gt;#80261&lt;/a&gt; (which required &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/80295&quot;&gt;#80295&lt;/a&gt; beforehand) which kept the original document attributes &lt;a href&#x3D;&quot;https://doc.rust-lang.org/nightly/nightly-rustc/rustc_span/symbol/struct.Symbol.html&quot;&gt;&lt;code&gt;Symbol&lt;/code&gt;&lt;/a&gt; with the &amp;quot;transformation information&amp;quot; instead of the transformed string. If you want to know more about how rustdoc works on doc comments formatting, &lt;a href&#x3D;&quot;https://github.com/GuillaumeGomez&quot;&gt;&lt;strong&gt;@GuillaumeGomez&lt;/strong&gt;&lt;/a&gt; wrote a blog post about it &lt;a href&#x3D;&quot;https://blog.guillaume-gomez.fr/articles/2020-11-11+New+doc+comment+handling+in+rustdoc&quot;&gt;here&lt;/a&gt;. The idea here is once again to compute this &amp;quot;on demand&amp;quot; instead of storing the results ahead for (potential) usage.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#why-did-we-not-rely-more-on-rustc-internals-earlier&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;why-did-we-not-rely-more-on-rustc-internals-earlier&quot;&gt;&lt;/a&gt;Why did we not rely more on rustc internals earlier?&lt;/h2&gt;
+&lt;p&gt;By now, you may be wondering why rustdoc didn&#x27;t rely more on rustc internals before this cleanup. The answer is actually simple: rustdoc is &lt;strong&gt;old&lt;/strong&gt;. When it was being written, rustc internals changed very frequently (even daily), making it very complicated for the rustdoc maintainers to keep up. To allow them to work without worrying too much about these changes, they decided to abstract the compiler internals so that they could then work with those rustdoc types without having breaking changes to worry about every day.&lt;/p&gt;
+&lt;p&gt;Since then, things got improved, the 1.0 version of Rust finally got released and things slowed down. Then, focus was mostly on adding new features to make rustdoc as great as possible. With the arrival of new rustdoc team members, we were finally able to get back on this aspect. It didn&#x27;t make much sense to keep all those abstractions because the internals are somewhat stable now and we can all see the results. :)&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#next-steps&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;next-steps&quot;&gt;&lt;/a&gt;Next Steps&lt;/h2&gt;
+&lt;p&gt;As you saw from the displayed benchmarks, the results were strongly positive. However, we&#x27;re still far from done. As we speak, we continue to simplify and rework a lot of the rustdoc source code.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#remove-doctree-altogether&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;remove-doctree-altogether&quot;&gt;&lt;/a&gt;Remove doctree altogether&lt;/h3&gt;
+&lt;p&gt;This is the &amp;quot;useful work&amp;quot; (as opposed to unnecessary complexity) that &lt;code&gt;doctree&lt;/code&gt; does today:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Detecting which items are publicly reachable. Ideally, this would just use compiler APIs, but those APIs &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/issues/64762&quot;&gt;are broken&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inlining items that are only reachable from an export. &#x27;Inlining&#x27; is showing the full documentation for an item at a re-export (&lt;code&gt;pub use std::process::Command&lt;/code&gt;) instead of just showing the &lt;code&gt;use&lt;/code&gt; statement. It&#x27;s used pervasively by the standard library and facade crates like &lt;code&gt;futures&lt;/code&gt; to show the relevant documentation in one place, instead of spread out across many crates. &lt;strong&gt;@jyn514&lt;/strong&gt; hopes this could be done in &lt;code&gt;clean&lt;/code&gt; instead, but has no idea yet how to do it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Moving macros from always being at the root of the crate to the module where they&#x27;re accessible. For example, this macro:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;#![crate_name&#x3D;&amp;quot;my_crate&amp;quot;]
+#![feature(decl_macro)]
+mod inner {
+    pub macro m() {}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;should be documented at &lt;code&gt;my_crate::inner::m&lt;/code&gt;, but the compiler shows it at &lt;code&gt;my_crate::m&lt;/code&gt; instead. The fix for this is an awful hack that goes through every module Rustdoc knows about to see if the name of the module matches the name of the macro&#x27;s parent module. At some point in the future, it would be great to fix the compiler APIs so this is no longer necessary.&lt;/p&gt;
+&lt;p&gt;Giant thank you to &lt;a href&#x3D;&quot;https://github.com/danielhenrymantilla&quot;&gt;&lt;strong&gt;@danielhenrymantilla&lt;/strong&gt;&lt;/a&gt; both for writing up the fix, and discovering and fixing several other macro-related bugs along the way!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If all these issues could be fixed, that would be an even bigger speedup - there would be no need to walk the tree in the first place!&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#continue-to-shrink-cleanitem&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;continue-to-shrink-cleanitem&quot;&gt;&lt;/a&gt;Continue to shrink &lt;code&gt;clean::Item&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;Most of the existing cleanups have been focused on calculating info on-demand that&#x27;s used for &lt;em&gt;every&lt;/em&gt; item in rustdoc, since that has the greatest impact. There are still lots of other parts that are calculated ahead of time, though: in particular &lt;a href&#x3D;&quot;https://doc.rust-lang.org/nightly/nightly-rustc/rustdoc/clean/types/enum.ItemKind.html&quot;&gt;&lt;code&gt;ItemKind&lt;/code&gt;&lt;/a&gt; goes completely through &lt;code&gt;clean&lt;/code&gt; before starting to render the documentation.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#speed-up-collect_blanket_impls&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;speed-up-collect_blanket_impls&quot;&gt;&lt;/a&gt;Speed up &lt;code&gt;collect_blanket_impls&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;One of the slowest functions in all of rustdoc is a function called
+&lt;a href&#x3D;&quot;https://doc.rust-lang.org/nightly/nightly-rustc/rustdoc/clean/utils/fn.get_auto_trait_and_blanket_impls.html&quot;&gt;&lt;code&gt;get_auto_trait_and_blanket_impls&lt;/code&gt;&lt;/a&gt;.
+On crates with many blanket implementation, such as &lt;code&gt;stm32&lt;/code&gt;-generated crates, this can take
+&lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/issues/79103#issuecomment-745732064&quot;&gt;almost half of the &lt;em&gt;total&lt;/em&gt;
+time&lt;/a&gt; rustdoc spends on
+the crate.&lt;/p&gt;
+&lt;p&gt;We are not sure yet how to speed this up, but there is definitely lots of room for improvement.
+If you&#x27;re interested in working on this, please reach out &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/247081-t-compiler.2Fperformance/topic/rustdoc.20calls.20.60for_each_relevant_impl.60.20a.20lot&quot;&gt;on Zulip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Overall, rustdoc is making rapid progress in performance, but there is still a lot more work to be done.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#errata&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;errata&quot;&gt;&lt;/a&gt;Errata&lt;/h2&gt;
+&lt;p&gt;An earlier version of the blog post described the section on slimming &lt;code&gt;doctree&lt;/code&gt; as &amp;quot;Burning down
+the tree&amp;quot;. The name was changed to be more environmentally friendly.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Joshua Nelson and Guillaume Gomez</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>1.49.0 pre-release testing</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2020/12/29/1.49.0-prerelease.html" type="text/html" title="1.49.0 pre-release testing" />
+        <published>2020-12-29T00:00:00+00:00</published>
+        <updated>2020-12-29T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2020/12/29/1.49.0-prerelease.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2020/12/29/1.49.0-prerelease.html">&lt;p&gt;The 1.49.0 pre-release is ready for testing. The release is scheduled for this
+Thursday, December 31st. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/blob/master/RELEASES.md#version-1490-2020-12-31&quot;&gt;Release notes can be found here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can try it out locally by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-plain&quot;&gt;RUSTUP_DIST_SERVER&#x3D;https://dev-static.rust-lang.org rustup update stable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The index is &lt;a href&#x3D;&quot;https://dev-static.rust-lang.org/dist/2020-12-29/index.html&quot;&gt;https://dev-static.rust-lang.org/dist/2020-12-29/index.html&lt;/a&gt;. You
+can leave feedback on the &lt;a href&#x3D;&quot;https://internals.rust-lang.org/t/rust-1-49-0-pre-release-testing/13690&quot;&gt;internals thread&lt;/a&gt;.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Pietro Albini</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Please welcome cjgillot and Nadrieril to compiler-contributors</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2020/12/28/cjgillot-and-nadrieril-for-compiler-contributors.html" type="text/html" title="Please welcome cjgillot and Nadrieril to compiler-contributors" />
+        <published>2020-12-28T00:00:00+00:00</published>
+        <updated>2020-12-28T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2020/12/28/cjgillot-and-nadrieril-for-compiler-contributors.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2020/12/28/cjgillot-and-nadrieril-for-compiler-contributors.html">&lt;p&gt;Please welcome &lt;a href&#x3D;&quot;https://github.com/cjgillot&quot;&gt;@cjgillot&lt;/a&gt; and &lt;a href&#x3D;&quot;https://github.com/Nadrieril&quot;&gt;@Nadrieril&lt;/a&gt; to the &lt;a href&#x3D;&quot;https://rust-lang.github.io/rfcs/2689-compiler-team-contributors.html&quot;&gt;compiler-contributors&lt;/a&gt; group!&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/cjgillot&quot;&gt;@cjgillot&lt;/a&gt; has been working to improve the query system used internally in &lt;code&gt;rustc&lt;/code&gt; which powers incremental compilation.
+Some of their improvements have been to reduce unnecessary work performed during incremental compilation, leading to faster builds.
+Other improvements have made the query system leaner allowing &lt;code&gt;rustc&lt;/code&gt; to bootstrap faster.
+&lt;a href&#x3D;&quot;https://github.com/cjgillot&quot;&gt;@cjgillot&lt;/a&gt; has also made many tweaks and optimizations to the query system.&lt;/p&gt;
+&lt;p&gt;&lt;a href&#x3D;&quot;https://github.com/Nadrieril&quot;&gt;@Nadrieril&lt;/a&gt; has been working on the pattern matching system resulting in improvements to compilation performance, code readability and related diagnostics generated by rustc.
+They have also been working on implementing features related to pattern matching like or-patterns and slice-patterns and helping push those features closer to stabilization.&lt;/p&gt;
+&lt;p&gt;Congratulations &lt;a href&#x3D;&quot;https://github.com/cjgillot&quot;&gt;@cjgillot&lt;/a&gt; and &lt;a href&#x3D;&quot;https://github.com/Nadrieril&quot;&gt;@Nadrieril&lt;/a&gt; and thanks!&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Wesley Wiser</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>Changes to Rust compiler team</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2020/12/14/changes-to-compiler-team.html" type="text/html" title="Changes to Rust compiler team" />
+        <published>2020-12-14T00:00:00+00:00</published>
+        <updated>2020-12-14T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2020/12/14/changes-to-compiler-team.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2020/12/14/changes-to-compiler-team.html">&lt;p&gt;There have been important changes recently to the Rust compiler team.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#leadership-rotation&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;leadership-rotation&quot;&gt;&lt;/a&gt;Leadership Rotation&lt;/h2&gt;
+&lt;p&gt;Here is something very new for our team: We are rotating the leadership. Niko Matsakis will be stepping down from their role as co-lead, and Wesley Wiser will be joining Felix Klock as the co-leads for the team.&lt;/p&gt;
+&lt;p&gt;Niko remains a compiler team member and will continue his contributions, especially on the RFC 2229, Polonius and Chalk projects. &lt;a href&#x3D;&quot;https://smallcultfollowing.com/babysteps/blog/2020/12/11/rotating-the-compiler-team-leads/&quot;&gt;Niko&#x27;s blog post&lt;/a&gt; discusses their motivations for stepping down in more detail.&lt;/p&gt;
+&lt;p&gt;Wesley has been contributing to Rust since 2015, and became a compiler team member in 2019. Wesley has contributed heavily to the compiler&#x27;s &lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2020/02/25/intro-rustc-self-profile.html&quot;&gt;&lt;code&gt;self-profile&lt;/code&gt; infrastructure&lt;/a&gt;, to its collection of &lt;a href&#x3D;&quot;https://blog.rust-lang.org/inside-rust/2019/12/02/const-prop-on-by-default.html&quot;&gt;MIR optimizations&lt;/a&gt;, and to its const-eval and incremental compilation subsystems. Wesley has also already proven himself as an effective leader: they are currently co-lead of several working groups: wg-incr-comp, wg-prioritization, and wg-self-profile.&lt;/p&gt;
+&lt;p&gt;Niko and I are delighted that Wesley is taking on this new leadership role, and I look forward to steering the compiler alongside them.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#membership-changes&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;membership-changes&quot;&gt;&lt;/a&gt;Membership Changes&lt;/h2&gt;
+&lt;p&gt;In addition to the changes in leadership, we also have a new compiler team member to announce: lcnr.&lt;/p&gt;
+&lt;p&gt;lcnr has been contributing to the compiler since 2018. They have improved the type system via changes such as higher-ranked lifetimes in predicates (&lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/73503&quot;&gt;#73503&lt;/a&gt;), and also have focused for the past two years on improving Rust&#x27;s support for complex generic expressions in constants (tracked at &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/76560&quot;&gt;#76560&lt;/a&gt;)&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Felix S. Klock II</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>What the Error Handling Project Group is Working On</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2020/11/23/What-the-error-handling-project-group-is-working-on.html" type="text/html" title="What the Error Handling Project Group is Working On" />
+        <published>2020-11-23T00:00:00+00:00</published>
+        <updated>2020-11-23T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2020/11/23/What-the-error-handling-project-group-is-working-on.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2020/11/23/What-the-error-handling-project-group-is-working-on.html">&lt;p&gt;The Rust community takes its error handling seriously. There’s already a strong culture in place for emphasizing helpful error handling and reporting, with multiple libraries each offering their own take (see Jane Lusby’s thorough &lt;a href&#x3D;&quot;https://youtu.be/rAF8mLI0naQ&quot;&gt;survey&lt;/a&gt; of Rust error handling/reporting libraries).&lt;/p&gt;
+&lt;p&gt;But there’s still room for improvement. The main focus of the group is carrying on error handling-related work that was in progress before the group&#x27;s formation. To that end, we&#x27;re working on systematically addressing error handling-related issues, as well as eliminating blockers that are holding up stalled RFCs.&lt;/p&gt;
+&lt;p&gt;Our first few meetings saw us setting a number of short- and long-term goals. These goals fall into one of three themes: making the &lt;code&gt;Error&lt;/code&gt; trait more universally accessible, improving error handling ergonomics, and authoring additional learning resources.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#one-standardized-error-trait&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;one-standardized-error-trait&quot;&gt;&lt;/a&gt;One Standardized &lt;code&gt;Error&lt;/code&gt; Trait&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;Error&lt;/code&gt; trait has been around since 1.0, and exposed two methods: &lt;code&gt;Error::description&lt;/code&gt; and &lt;code&gt;Error::cause&lt;/code&gt;. As it was originally constructed, it was too restictive for a number of reasons&lt;sup&gt;1&lt;/sup&gt;. The &lt;code&gt;Failure&lt;/code&gt; crate addressed many of the &lt;code&gt;Error&lt;/code&gt; trait&#x27;s shortcomings by exporting the &lt;code&gt;Fail&lt;/code&gt; trait, which informs many of changes that are being made to improve the &lt;code&gt;Error&lt;/code&gt; trait.&lt;/p&gt;
+&lt;p&gt;On that note, bolstering the &lt;code&gt;std::error::Error&lt;/code&gt; trait such that it could be adopted across the Rust community as &lt;em&gt;the&lt;/em&gt; &lt;code&gt;Error&lt;/code&gt; trait has been an ongoing process since &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/pull/2504&quot;&gt;RFC 2504&lt;/a&gt; was merged in August 2018.&lt;/p&gt;
+&lt;p&gt;This process also involves stabilizing many &lt;code&gt;Error&lt;/code&gt; trait APIs and crates that are, as of this writing, on nightly only. These include the &lt;code&gt;backtrace&lt;/code&gt; and &lt;code&gt;chain&lt;/code&gt; methods, which are both extremely useful for working with error types. If you’re interested in following or contributing to this work, take a look at &lt;a href&#x3D;&quot;https://github.com/rust-lang/project-error-handling/issues/3&quot;&gt;this issue&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another related initiative is migrating the &lt;code&gt;Error&lt;/code&gt; trait to &lt;code&gt;core&lt;/code&gt; so that it’s more widely accessible to different use cases (such as in FFI or embedded contexts).&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#more-ways-to-access-error-contexts&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;more-ways-to-access-error-contexts&quot;&gt;&lt;/a&gt;More Ways to Access Error Contexts&lt;/h2&gt;
+&lt;p&gt;Rust’s language semantics already provide a decently ergonomic error handling experience, what with the &lt;code&gt;Result&lt;/code&gt; type and the &lt;code&gt;?&lt;/code&gt; operator. The error handling group has identified a few additional features to further improve the error handling user experience.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#adding-the-capability-to-iterate-through-the-backtrace-type&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;adding-the-capability-to-iterate-through-the-backtrace-type&quot;&gt;&lt;/a&gt;Adding the Capability to Iterate Through the &lt;code&gt;Backtrace&lt;/code&gt; Type&lt;/h3&gt;
+&lt;p&gt;As of this writing, the &lt;code&gt;backtrace&lt;/code&gt; type only implements the &lt;code&gt;Display&lt;/code&gt; and &lt;code&gt;Debug&lt;/code&gt; traits. This means that the only way to work with the &lt;code&gt;backtrace&lt;/code&gt; type is to print it out, which is less than ideal. An iterator API that provided the ability to iterate through stack frames would give users the ability to control how their backtraces are formatted, which is a necessary step adding &lt;code&gt;std::backtrace::Backtrace&lt;/code&gt; support to crates like &lt;code&gt;color-backtrace&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Upon researching strategies for how to tackle this, we found that the &lt;code&gt;backtrace&lt;/code&gt; crate already has a &lt;code&gt;frames&lt;/code&gt; method that would work nicely for implementing the &lt;code&gt;Iterator&lt;/code&gt; API. It should be a relatively straightforward ordeal to expose an identical method in &lt;code&gt;std&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/pull/78299&quot;&gt;PR&lt;/a&gt; for this has been opened for anyone who would like to check it out.&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#generic-member-access&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;generic-member-access&quot;&gt;&lt;/a&gt;Generic Member Access&lt;/h3&gt;
+&lt;p&gt;Currently, when we want to fetch some additional context related to an error, there are specific methods that need to be called in order to fetch that context. For example, to see the backtrace for an error, we’d call the &lt;code&gt;backtrace&lt;/code&gt; method: &lt;code&gt;let backtrace &#x3D; some_error.backtrace();&lt;/code&gt;. The problem with this approach is that it&#x27;s not possible to support types that are defined outside of &lt;code&gt;std&lt;/code&gt;. Even for types that exist within &lt;code&gt;std&lt;/code&gt;, a method to access each respective type needs to be defined, which makes things cumbersome and harder to maintain.&lt;/p&gt;
+&lt;p&gt;As the name implies, generic member access, when it gets implemented, is a type-agnostic way to access different pieces of context from an &lt;code&gt;Error&lt;/code&gt; trait object. The analogy that clicked for me is when you’re parsing a string into a number, with something like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;let ten &#x3D; &amp;quot;10&amp;quot;.parse::&amp;lt;i32&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or when you’re collecting the contents yielded by an iterator:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;use std::collections::HashSet;
+
+let a_to_z_set &#x3D; (&#x27;a&#x27;..&#x3D;&#x27;z&#x27;).collect::&amp;lt;HashSet&amp;lt;_&amp;gt;&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In a similar vein, you’d be able to access some piece of context from an error by specifying its type ID:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-rust&quot;&gt;let span_trace &#x3D; some_error.context::&amp;lt;&amp;amp;SpanTrace&amp;gt;();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This could be used to fetch other pieces of context related to the error such as its backtrace, the error’s sources, status codes, alternate formatting representations (such as &lt;code&gt;&amp;amp;dyn Serialize&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;This feature will enable other features we plan on adding down the line, such as exposing a way to report back all of the locations from which errors originated from in a program, as well as exposing a more consistent error reporting format besides just &lt;code&gt;Display&lt;/code&gt; and &lt;code&gt;Debug&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Jane has been putting in a lot of work on pushing these ideas forward. You can check out the associated &lt;a href&#x3D;&quot;https://github.com/rust-lang/rfcs/pull/2895&quot;&gt;RFC&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#authoring-a-book-on-rust-error-handling-best-practices&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;authoring-a-book-on-rust-error-handling-best-practices&quot;&gt;&lt;/a&gt;Authoring a Book on Rust Error Handling Best Practices&lt;/h2&gt;
+&lt;p&gt;Last but not least, there’s a lot of interest in the group around authoring &lt;a href&#x3D;&quot;https://github.com/rust-lang/project-error-handling/tree/master/the-rust-error-book&quot;&gt;&lt;em&gt;The Rust Error Book&lt;/em&gt;&lt;/a&gt;. The aim of the book would be to codify and communicate different error handling best practices based on the respective use-case. This could include FFI use-cases, or best practices around returning error codes from programs.&lt;/p&gt;
+&lt;p&gt;This is an ongoing effort that will see a lot of progress in the coming weeks and months!&lt;/p&gt;
+&lt;h2&gt;&lt;a href&#x3D;&quot;#in-summary&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;in-summary&quot;&gt;&lt;/a&gt;In Summary&lt;/h2&gt;
+&lt;p&gt;We&#x27;re excited by the opportunities to continue to iterate on and improve Rust&#x27;s error handling ergonomics and culture! If you&#x27;re interested in helping out and/or joining in on the conversation, please come by and introduce yourself in our &lt;a href&#x3D;&quot;https://rust-lang.zulipchat.com/#narrow/stream/257204-project-error-handling&quot;&gt;Zulip stream&lt;/a&gt;. You can also keep track of our progress via our &lt;a href&#x3D;&quot;https://github.com/rust-lang/project-error-handling&quot;&gt;GitHub repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Lastly, we&#x27;ll be presenting some forthcoming news about a universally consistent error reporting format in our next update, so stay tuned for that!&lt;/p&gt;
+&lt;h3&gt;&lt;a href&#x3D;&quot;#footnotes&quot; aria-hidden&#x3D;&quot;true&quot; class&#x3D;&quot;anchor&quot; id&#x3D;&quot;footnotes&quot;&gt;&lt;/a&gt;Footnotes&lt;/h3&gt;
+&lt;p&gt;&lt;sup&gt;1&lt;/sup&gt;The &lt;code&gt;Error::description&lt;/code&gt; method only supported string slices, which meant that it was not straightforward to create dynamic error messages that included additional context. This method was deprecated in favor of &lt;code&gt;Display&lt;/code&gt;. The &lt;code&gt;Error::cause&lt;/code&gt; method, now known as &lt;code&gt;Error::source&lt;/code&gt;, doesn&#x27;t enforce errors having a &lt;code&gt;&#x27;static&lt;/code&gt; lifetime, which means that downcasting error sources is impossible, making it much more difficult to handle errors using dynamic error handlers.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Sean Chen</name>
+        </author>
+    </entry>
+    
+    <entry>
+        <title>1.48.0 pre-release testing</title>
+        <link rel="alternate" href="https://blog.rust-lang.org/inside-rust/2020/11/16/1.48.0-prerelease.html" type="text/html" title="1.48.0 pre-release testing" />
+        <published>2020-11-16T00:00:00+00:00</published>
+        <updated>2020-11-16T00:00:00+00:00</updated>
+        <id>https://blog.rust-lang.org/inside-rust/2020/11/16/1.48.0-prerelease.html</id>
+        <content type="html" xml:base="https://blog.rust-lang.org/inside-rust/2020/11/16/1.48.0-prerelease.html">&lt;p&gt;The 1.48.0 pre-release is ready for testing. The release is scheduled for this
+Thursday, November 19th. &lt;a href&#x3D;&quot;https://github.com/rust-lang/rust/blob/stable/RELEASES.md#version-1480-2020-11-19&quot;&gt;Release notes can be found here.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You can try it out locally by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class&#x3D;&quot;language-plain&quot;&gt;RUSTUP_DIST_SERVER&#x3D;https://dev-static.rust-lang.org rustup update stable
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The index is &lt;a href&#x3D;&quot;https://dev-static.rust-lang.org/dist/2020-11-16/index.html&quot;&gt;https://dev-static.rust-lang.org/dist/2020-11-16/index.html&lt;/a&gt;. You
+can leave feedback on the &lt;a href&#x3D;&quot;https://internals.rust-lang.org/t/rust-1-48-0-pre-release-testing/13401&quot;&gt;internals thread&lt;/a&gt;.&lt;/p&gt;
+</content>
+
+        <author>
+            <name>Pietro Albini</name>
+        </author>
+    </entry>
+    
+</feed>
