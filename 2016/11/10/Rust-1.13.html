@@ -21,18 +21,18 @@
 <meta property="og:locale" content="en_US" />
 
 <!-- styles -->
-<link rel="stylesheet" href="/styles/vendor.css"/>
-<link rel="stylesheet" href="/styles/fonts.css"/>
-<link rel="stylesheet" href="/styles/app.css"/>
-<link rel="stylesheet" href="/styles/highlight.css"/>
+<link rel="stylesheet" href="../../../styles/vendor.css"/>
+<link rel="stylesheet" href="../../../styles/fonts.css"/>
+<link rel="stylesheet" href="../../../styles/app.css"/>
+<link rel="stylesheet" href="../../../styles/highlight.css"/>
 
 <!-- favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<link rel="manifest" href="/images/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../images/favicon-32x32.png">
+<link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+<link rel="manifest" href="../../../images/site.webmanifest">
+<link rel="mask-icon" href="../../../images/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="theme-color" content="#ffffff">
 
@@ -43,8 +43,8 @@
   <body>
     <nav class="flex flex-row justify-center justify-end-l items-center flex-wrap ph2 pl3-ns pr4-ns">
   <div class="brand flex-auto w-100 w-auto-l self-start tc tl-l">
-    <a href="/">
-      <img class="v-mid ml0-l" alt="Rust Logo" src="/images/rust-logo-blk.svg">
+    <a href="../../../">
+      <img class="v-mid ml0-l" alt="Rust Logo" src="../../../images/rust-logo-blk.svg">
       <span class="dib ml1 ml0-l">Rust Blog</span>
     </a>
   </div>
@@ -76,8 +76,8 @@ a systems programming language focused on safety, speed, and concurrency.</p>
 <p>As always, you can <a href="https://www.rust-lang.org/downloads.html">install Rust 1.13.0</a> from the appropriate page on
 our website, and check out the <a href="https://github.com/rust-lang/rust/blob/stable/RELEASES.md#version-1130-2016-11-10">detailed release notes for 1.13.0</a> on
 GitHub. 1448 patches were landed in this release.</p>
-<p>It's been a busy season in Rust. We enjoyed three Rust conferences, <a href="http://rustconf.com/">RustConf</a>,
-<a href="http://www.rustfest.eu/">RustFest</a>, and <a href="http://www.rust-belt-rust.com/">Rust Belt Rust</a>, in short succession. It was great to see so
+<p>It's been a busy season in Rust. We enjoyed three Rust conferences, <a href="https://rustconf.com/">RustConf</a>,
+<a href="https://www.rustfest.eu/">RustFest</a>, and <a href="https://www.rust-belt-rust.com/">Rust Belt Rust</a>, in short succession. It was great to see so
 many Rustaceans in person, some for the first time! We've been <a href="https://internals.rust-lang.org/t/setting-our-vision-for-the-2017-cycle/3958/47">thinking a lot</a>
 about the future, developing a <a href="https://github.com/rust-lang/rfcs/pull/1774">roadmap for 2017</a>, and <a href="https://internals.rust-lang.org/t/introducing-rust-language-server-source-release/4209">building the tools</a> our
 users <a href="https://internals.rust-lang.org/t/2016-rust-commercial-user-survey-results/4317">tell us</a> they need.</p>
@@ -182,7 +182,7 @@ receive, polishing off the rough corners of our already-powerful base language.<
 <h4><a href="#performance-improvements" aria-hidden="true" class="anchor" id="performance-improvements"></a>Performance improvements</h4>
 <p>There has been a lot of focus on compiler performance lately. There's good news
 in this release, and more to come.</p>
-<p>Mark Simulacrum and Nick Cameron have been refining <a href="http://perf.rust-lang.org">perf.rust-lang.org</a>, our
+<p>Mark Simulacrum and Nick Cameron have been refining <a href="https://perf.rust-lang.org">perf.rust-lang.org</a>, our
 tool for tracking compiler performance. It runs the <a href="https://github.com/rust-lang-nursery/rustc-benchmarks">rustc-benchmarks</a> suite
 regularly, on dedicated hardware, and tracks the results over time. This tool
 records the results for each pass in the compiler and is used by the compiler
@@ -195,7 +195,7 @@ in a few ways to eliminate bogus, incomplete, or confusing results). There
 appear to be some big reductions, which are quantified on the corresponding
 <a href="https://goo.gl/CLIAhi">statistics</a> page.</p>
 <br/>
-<p><img src="/images/2016-11-Rust-1.13/graph.png" alt="Performance graph" /></p>
+<p><img src="../../../images/2016-11-Rust-1.13/graph.png" alt="Performance graph" /></p>
 <br/>
 <p>The big improvement demonstrated in the graphs, on September 1, is from an
 optimization from Niko to <a href="https://github.com/rust-lang/rust/pull/35761">cache normalized projections during
@@ -453,7 +453,6 @@ for parametricity in Rust.</li>
         <ul>
           <li><a href="https://doc.rust-lang.org" target="_blank" rel="noopener">Documentation</a></li>
           <li><a href="mailto:core-team@rust-lang.org">Contact the Rust Team</a></li>
-          <li><a href="http://ping.rust-lang.org">Check Website Status</a></li>
         </ul>
       </div>
       <div class="four columns mt3 mt0-l">
@@ -469,15 +468,15 @@ for parametricity in Rust.</li>
       <div class="four columns mt3 mt0-l">
         <h4>Social</h4>
         <div class="flex flex-row flex-wrap">
-          <a href="https://twitter.com/rustlang" target="_blank" rel="noopener" alt="twitter link"><img src="/images/twitter.svg" alt="twitter logo" title="Twitter"/></a>
-          <a href="https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA" target="_blank" rel="noopener" alt="youtube link"><img style="padding-top: 6px; padding-bottom:6px" src="/images/youtube.svg" alt="youtube logo" title="YouTube"/></a>
-          <a href="https://discord.gg/rust-lang" target="_blank" rel="noopener" alt="discord link"><img src="/images/discord.svg" alt="discord logo" title="Discord"/></a>
-          <a href="https://github.com/rust-lang" target="_blank" rel="noopener" alt="github link"><img src="/images/github.svg" alt="github logo" title="GitHub"/></a>
+          <a href="https://twitter.com/rustlang" target="_blank" rel="noopener" alt="twitter link"><img src="../../../images/twitter.svg" alt="twitter logo" title="Twitter"/></a>
+          <a href="https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA" target="_blank" rel="noopener" alt="youtube link"><img style="padding-top: 6px; padding-bottom:6px" src="../../../images/youtube.svg" alt="youtube logo" title="YouTube"/></a>
+          <a href="https://discord.gg/rust-lang" target="_blank" rel="noopener" alt="discord link"><img src="../../../images/discord.svg" alt="discord logo" title="Discord"/></a>
+          <a href="https://github.com/rust-lang" target="_blank" rel="noopener" alt="github link"><img src="../../../images/github.svg" alt="github logo" title="GitHub"/></a>
         </div>
         <h4 class="mt4 mb3">RSS</h4>
         <ul>
-          <li><a href="/feed.xml">Main Blog</a></li>
-          <li><a href="/inside-rust/feed.xml">"Inside Rust" Blog</a></li>
+          <li><a href="../../../feed.xml">Main Blog</a></li>
+          <li><a href="../../../inside-rust/feed.xml">"Inside Rust" Blog</a></li>
         </ul>
       </div>
 
@@ -490,7 +489,7 @@ for parametricity in Rust.</li>
 </footer>
 
 <!-- scripts -->
-<script src="/scripts/highlight.js"></script>
+<script src="../../../scripts/highlight.js"></script>
 
   </body>
 </html>

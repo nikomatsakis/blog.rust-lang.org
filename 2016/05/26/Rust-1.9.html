@@ -21,18 +21,18 @@
 <meta property="og:locale" content="en_US" />
 
 <!-- styles -->
-<link rel="stylesheet" href="/styles/vendor.css"/>
-<link rel="stylesheet" href="/styles/fonts.css"/>
-<link rel="stylesheet" href="/styles/app.css"/>
-<link rel="stylesheet" href="/styles/highlight.css"/>
+<link rel="stylesheet" href="../../../styles/vendor.css"/>
+<link rel="stylesheet" href="../../../styles/fonts.css"/>
+<link rel="stylesheet" href="../../../styles/app.css"/>
+<link rel="stylesheet" href="../../../styles/highlight.css"/>
 
 <!-- favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-<link rel="manifest" href="/images/site.webmanifest">
-<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../images/favicon-32x32.png">
+<link rel="icon" type="image/svg+xml" href="../../../images/favicon.svg">
+<link rel="manifest" href="../../../images/site.webmanifest">
+<link rel="mask-icon" href="../../../images/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="theme-color" content="#ffffff">
 
@@ -43,8 +43,8 @@
   <body>
     <nav class="flex flex-row justify-center justify-end-l items-center flex-wrap ph2 pl3-ns pr4-ns">
   <div class="brand flex-auto w-100 w-auto-l self-start tc tl-l">
-    <a href="/">
-      <img class="v-mid ml0-l" alt="Rust Logo" src="/images/rust-logo-blk.svg">
+    <a href="../../../">
+      <img class="v-mid ml0-l" alt="Rust Logo" src="../../../images/rust-logo-blk.svg">
       <span class="dib ml1 ml0-l">Rust Blog</span>
     </a>
   </div>
@@ -100,7 +100,7 @@ assert!(result.is_err());
 </ul>
 <p>Expected problems usually arise from conditions that are outside of your
 control; robust code should be prepared for anything its environment might throw
-at it. In Rust, expected problems are handled via <a href="http://static.rust-lang.org/doc/master/std/result/index.html">the <code>Result</code> type</a>,
+at it. In Rust, expected problems are handled via <a href="https://static.rust-lang.org/doc/master/std/result/index.html">the <code>Result</code> type</a>,
 which allows a function to return information about the problem to its caller,
 which can then handle the error in a fine-grained way.</p>
 <p>Unexpected problems are <em>bugs</em>: they arise due to a contract or assertion being
@@ -150,14 +150,14 @@ to <a href="https://github.com/rust-lang/rfcs/blob/master/text/1270-deprecation.
 <li><code>i586-pc-windows-msvc</code>.</li>
 </ul>
 <p>The first two targets are particularly interesting from a cross-compilation
-perspective; see the <a href="http://blog.rust-lang.org/2016/05/13/rustup.html">recent blog post on <code>rustup</code></a> for more details.</p>
+perspective; see the <a href="https://blog.rust-lang.org/2016/05/13/rustup.html">recent blog post on <code>rustup</code></a> for more details.</p>
 <h4><a href="#compile-time-improvements" aria-hidden="true" class="anchor" id="compile-time-improvements"></a>Compile time improvements</h4>
 <p><a href="https://github.com/rust-lang/rust/pull/32062">The time complexity of comparing variables for equivalence</a> during
 type unification is reduced from O(n!) to O(n). As a result, some programming
 patterns compile much, much more quickly.</p>
 <h4><a href="#rolling-out-use-of-specialization" aria-hidden="true" class="anchor" id="rolling-out-use-of-specialization"></a>Rolling out use of specialization</h4>
 <p>This release sees some of the first use of <a href="https://github.com/rust-lang/rfcs/pull/1210">specialization</a> within the standard
-library. Specialization, which is currently available only on <a href="http://blog.rust-lang.org/2014/10/30/Stability.html">nightly</a>, allows
+library. Specialization, which is currently available only on <a href="https://blog.rust-lang.org/2014/10/30/Stability.html">nightly</a>, allows
 generic code to automatically be specialized based on more specific type
 information.</p>
 <p>One example where this comes up in the standard library: conversion from a
@@ -351,7 +351,6 @@ variable, which is useful for packagers, for example.</p>
         <ul>
           <li><a href="https://doc.rust-lang.org" target="_blank" rel="noopener">Documentation</a></li>
           <li><a href="mailto:core-team@rust-lang.org">Contact the Rust Team</a></li>
-          <li><a href="http://ping.rust-lang.org">Check Website Status</a></li>
         </ul>
       </div>
       <div class="four columns mt3 mt0-l">
@@ -367,15 +366,15 @@ variable, which is useful for packagers, for example.</p>
       <div class="four columns mt3 mt0-l">
         <h4>Social</h4>
         <div class="flex flex-row flex-wrap">
-          <a href="https://twitter.com/rustlang" target="_blank" rel="noopener" alt="twitter link"><img src="/images/twitter.svg" alt="twitter logo" title="Twitter"/></a>
-          <a href="https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA" target="_blank" rel="noopener" alt="youtube link"><img style="padding-top: 6px; padding-bottom:6px" src="/images/youtube.svg" alt="youtube logo" title="YouTube"/></a>
-          <a href="https://discord.gg/rust-lang" target="_blank" rel="noopener" alt="discord link"><img src="/images/discord.svg" alt="discord logo" title="Discord"/></a>
-          <a href="https://github.com/rust-lang" target="_blank" rel="noopener" alt="github link"><img src="/images/github.svg" alt="github logo" title="GitHub"/></a>
+          <a href="https://twitter.com/rustlang" target="_blank" rel="noopener" alt="twitter link"><img src="../../../images/twitter.svg" alt="twitter logo" title="Twitter"/></a>
+          <a href="https://www.youtube.com/channel/UCaYhcUwRBNscFNUKTjgPFiA" target="_blank" rel="noopener" alt="youtube link"><img style="padding-top: 6px; padding-bottom:6px" src="../../../images/youtube.svg" alt="youtube logo" title="YouTube"/></a>
+          <a href="https://discord.gg/rust-lang" target="_blank" rel="noopener" alt="discord link"><img src="../../../images/discord.svg" alt="discord logo" title="Discord"/></a>
+          <a href="https://github.com/rust-lang" target="_blank" rel="noopener" alt="github link"><img src="../../../images/github.svg" alt="github logo" title="GitHub"/></a>
         </div>
         <h4 class="mt4 mb3">RSS</h4>
         <ul>
-          <li><a href="/feed.xml">Main Blog</a></li>
-          <li><a href="/inside-rust/feed.xml">"Inside Rust" Blog</a></li>
+          <li><a href="../../../feed.xml">Main Blog</a></li>
+          <li><a href="../../../inside-rust/feed.xml">"Inside Rust" Blog</a></li>
         </ul>
       </div>
 
@@ -388,7 +387,7 @@ variable, which is useful for packagers, for example.</p>
 </footer>
 
 <!-- scripts -->
-<script src="/scripts/highlight.js"></script>
+<script src="../../../scripts/highlight.js"></script>
 
   </body>
 </html>
